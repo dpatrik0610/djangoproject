@@ -6,6 +6,7 @@ from django.http.response import JsonResponse
 from inventoryManager.models import Item
 from inventoryManager.serializers import ItemSerializer
 
+
 # Create your views here.
 
 @csrf_exempt

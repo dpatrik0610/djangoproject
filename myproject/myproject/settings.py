@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-7=e2llah@8vhg&(eax^whm)n6_-cdt8ky@f5&ux)=6!70fo+63
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '87.97.12.150',
+    '*',
 ]
 
 
@@ -54,6 +53,7 @@ INSTALLED_APPS = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
+SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware', # Added manually
@@ -138,7 +138,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
-  os.path.join(STATIC_ROOT, 'static/'),
+  os.path.join(STATIC_ROOT, 'static'),
 )
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

@@ -4,29 +4,22 @@ body {
     background-size: cover;
 
     color: #fff;
-  }
-  
-  .container {
-    background-color: #495057cc;
-    padding: 20px;
-  }
-  
-  .register-panel {
-    background-color: #212529;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  .register-panel h3 {
-    margin-bottom: 20px;
-  }
-  
-  .register-panel button {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .register-panel button:hover {
-    background-color: #0056b3;
-  }
-  
+}
+
+.register-panel {
+  background-color: #212529c2;
+  border-radius: 5px;
+  padding: 20px 180px;
+}
+
+.register-panel h3 {
+  margin-bottom: 20px;
+}
+
+.container{
+  height: 100vh;
+}
+
+.register-panel .btn-primary {
+  width: 100%;
+}

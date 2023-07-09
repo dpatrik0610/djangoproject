@@ -12,7 +12,7 @@ $('#itemForm').submit(function(event) {
     };
 
     $.ajax({
-        url: 'http://localhost:8000/item/',
+        url: 'item/',
         method: 'PUT',
         data: JSON.stringify(requestData),
         dataType: 'json',

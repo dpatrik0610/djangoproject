@@ -1,7 +1,22 @@
-/* Dark theme */
+/* Colors */
+.bgcolor-darker {background-color: #120907;}
+.bgcolor-dark {background-color: #161e3a;}
+.bgcolor3-medium {background-color: #4b4391;}
+.bgcolor4-light {background-color: #7e77e4;}
+.bgcolor5-lighter {background-color: #aed8eb;}
+
+/* Website */
 body {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-image: url('../../images/index-background.jpg');
+  background-attachment: fixed;
+  color: #aed8eb;
+}
+.hello-message{
+  font-size: 18px;
+  color: #aed8eb;
+  margin: auto;
+  margin-right: 20px;
+  font-weight: bold;
 }
 
 .container {
@@ -9,19 +24,16 @@ body {
 }
 
 .navbar {
-  background-color: #222222;
+  background-color: #070b12f3;
 }
 
-.navbar-brand {
-  color: #ffffff;
-}
-
-.navbar-nav .nav-link {
-  color: #ffffff;
+.nav-link{
+  margin-right: 10px;
 }
 
 /* Modern design */
 h2 {
+  color: #aed8eb;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -38,7 +50,7 @@ h2 {
   color: #ffffff;
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #779ae4;
 }
 
 .table th {
@@ -46,9 +58,9 @@ h2 {
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #333333;
+  background-color: #4b439193
 }
 
 .table tbody tr:hover {
-  background-color: #444444;
+  background-color: #7e77e4;
 }

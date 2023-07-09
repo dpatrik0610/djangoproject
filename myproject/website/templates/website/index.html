@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="{% static 'website/css/styles.css' %}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="{% url 'home' %} " onclick="loadContent('homePage'); return false;">Home</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand border-right border-light pr-3" href="{% url 'home' %} " onclick="loadContent('homePage'); return false;">Home</a>
       <!-- Hamburger Menu -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@
       </button>
       <!---->
       <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav mr-auto">
               <li class="nav-item">
                 <a class="nav-link dynamicloader" href="{% url 'items' %} " onclick="loadContent('itemsPage'); return false;">Items</a>
               </li>
@@ -28,15 +28,31 @@
               <li class="nav-item">
                 <a class="nav-link dynamicloader" onclick="loadContent('notFound'); return false;">WIP 3</a>
               </li>
-              <li>
-                <a class="nav-link dynamicloader" href="{% url 'menu' %}" onclick="loadContent('menuPage'); return false;">Menu</a>
-              </li>
           </ul>
-      </div>
-      <div class="ml-auto">
-        {% if not authenticated %}
-          <a class="nav-link border border-success" href="{% url 'login' %}" target="_top">Login</a>
-        {% endif %}
+          {% if authenticated %}
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <span class="nav-link text-light hello-message m-1">Hello, {{ request.user }}!</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link dynamicloader btn btn-primary text-light border-primary m-1" href="{% url 'menu' %}" onclick="loadContent('dashboard'); return false;">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-primary text-light m-1" href="{% url 'logout' %}" target="_top">Logout</a>
+            </li>
+          </ul>
+          {% endif %}
+
+          {% if not authenticated %}
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-primary text-light m-1" href="{% url 'login' %}" target="_top">Log-In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-warning text-light m-1" href="{% url 'register' %}" target="_top">Register</a>
+            </li>
+          </ul>
+          {% endif %}
       </div>
     </nav>
 

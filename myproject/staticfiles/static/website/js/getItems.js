@@ -1,5 +1,5 @@
 // Fetch and populate items table
-$.getJSON('http://localhost:8000/item/', function(data) {
+$.getJSON('item/', function(data) {
     var itemsTableBody = $('#itemsTableBody');
     $.each(data, function(index, item) {
         var row = $('<tr></tr>');
