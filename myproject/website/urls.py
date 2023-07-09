@@ -1,9 +1,9 @@
 from django.urls import path
-from website import views
+from website import views as webpages
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('homePage/', views.home, name='home'),
-    path('itemsPage/', views.items, name='items'),
-    path('menuPage/', views.menu, name='menu'),
+    path('', webpages.index, name='index'),
+    path('homePage/', webpages.home, name='home'),
+    path('itemsPage/', webpages.items, name='items'),
+    path('menuPage/', webpages.menu, name='menu'),
 ]

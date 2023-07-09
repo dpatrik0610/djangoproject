@@ -1,7 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import user_passes_test
+from django.http import HttpResponseForbidden
+
+# Views
 
 def index(request):
-    return render(request, 'website/index.html')
+    if request.user.is_authenticated:
+        return render(request, 'website/index.html', {'authenticated': True})
+    else:
+        return render(request, 'website/index.html', {'authenticated': False})
 
 def home(request):
     return render(request, 'website/home.html')
