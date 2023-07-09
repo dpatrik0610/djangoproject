@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Webpage</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'website/css/styles.css' %}"></head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'index' %}">My Website</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}" onclick="loadContent('homePage'); return false;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'items' %}" onclick="loadContent('itemsPage'); return false;">Items</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'menu' %}" onclick="loadContent('menuPage'); return false;">Menu</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <!-- Content will be loaded dynamically here -->
+    <div id="content"></div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="{% static 'website/js/loadPage.js' %}"></script>
+
+</body>
+</html>
